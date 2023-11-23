@@ -1,0 +1,12 @@
+.container-fluid{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    
+}
+
+::ng-deep .dropdown-menu.show {
+    display: block;
+    right:0;
+}
+
+::ng-deep.dropdown-menu {
+    left:initial !important;
+}

@@ -1,0 +1,131 @@
+<div class="container-fluid py-5">
+    <div class="container profilecmp py-5">
+        <div class="text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card-header">
+                        Profile Page
+                        <a href="/homepage" class="btn btn-sm btn-primary" style="float: right">Back</a>
+                    </div>
+                    <nav class="py-4">
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Profile Data</button>
+                          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Change Password</button>
+                        </div>
+                      </nav>
+                      <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                            <div class="container bg-light">
+                                <div class="container-xl px-4 p-5">
+                                    <div class="row">
+                                        <div class="col-xl-4">
+                                            <div class="card mb-4 mb-xl-0 shadow">
+                                                <div class="card-header text-center">Profile Picture</div>               
+                                                <div class="card-body text-center">
+                                                    <img class="img-account-profile rounded-circle mb-2" src="assets/h2.jpg">
+                                                    <fieldset class="form-group">
+                                                        <input type="file" name="file" formControlName="file"
+                                                            class="form-control-file" id="exampleInputFile">
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-8">
+                                            <div class="card mb-4">
+                                                <div class="card-header text-center">Account Details</div>
+                                                <div class="card-body text shadow text-start">
+                                                    <form>
+                                                        <div class="row gx-3 mb-3">
+                                                            <div class="col-md-6">
+                                                                <label class="small mb-1">Admin name</label>
+                                                                <input class="form-control" formControlName="admin_name"
+                                                                    type="text" name="admin_name" required />
+        
+                                                            </div>
+        
+                                                            <div class="col-md-6">
+                                                                <label class="small mb-1">User name</label>
+                                                                <input formControlName="username" class="form-control"
+                                                                    type="text" name="username" required/>
+        
+                                                            </div>
+                                            
+                                                        </div>
+        
+                                                        <div class="row gx-3 mb-3">
+                                                            <div class="col-md-6">
+                                                                <label class="small mb-1">Enter Email</label>
+                                                                <input formControlName="email" class="form-control"
+                                                                    type="text" name="email" required />
+        
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label class="small mb-1" for="inputPhone">Phone number</label>
+                                                                <input class="form-control" type="number"
+                                                                    formControlName="mobile_number" name="mobile_number"required />
+                                                            </div>
+        
+                                                        </div>
+                                                        <div class="row gx-3 mb-3">
+                                                            <div class="col-md-12">
+                                                                <label class="small mb-1">Message</label>
+                                                                <textarea id="form_message" name="message" formControlName="message" class="form-control" placeholder="Message for me *" rows="4" required data-error="Please,leave us a message."></textarea>
+                                                            </div>
+                                                        </div>
+                                                        
+        
+                                                        <button class="btn btn-primary" type="submit">
+                                                            Save changes
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                            <div class="col-xl-4 passwordpage">
+                                <div class="card mb-4">
+                                    <div class="card-header text-center">Password Change</div>
+                                    <div class="card-body text shadow text-start">
+                                        <form [formGroup]="changePaaword" (ngsubmit)="changePass(changePaawordForm)">
+                                            <div class="row gx-3 mb-3">
+                                                <div class="col-md-12 py-2">
+                                                    <label class="small mb-1">Enter Old Password</label>
+                                                    <input class="form-control" formControlName="oldPassword"
+                                                        type="text" name="oldPassword" required />
+
+                                                </div> 
+                                                <div class="col-md-12 py-2">
+                                                    <label class="small mb-1">Create New Password</label>
+                                                    <input class="form-control" formControlName="newPassword"
+                                                        type="text" name="newPassword" required />
+
+                                                </div>
+
+                                                <div class="col-md-12 py-2">
+                                                    <label class="small mb-1">Confirm New Password</label>
+                                                    <input formControlName="confirmPassword" class="form-control"
+                                                        type="text" name="confirmPassword" required/>
+
+                                                </div>
+                                
+                                            </div>
+
+                                            <button class="btn btn-primary" type="submit">
+                                                Change Password
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

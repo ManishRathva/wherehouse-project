@@ -1,6 +1,66 @@
-<div class="container-fluid">
-    <div class="container">
-        <p>Contact works!</p>
+<div class="container-fluid py-5">
+    <div class="py-5">
+        <div class="container-fluid py-4">
+            <div class="text-center">
+                <h3>Contact Page</h3>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-md-6 col-sm-12 text-center">
+                    <img src="assets/contact-page.png" width="100%" height="auto" alt="">
+                </div>
+                    <div class="col-xl-6 col-md-6 col-sm-12">
+                      <form id="contact-form" method="post" action="" role="form" [formGroup]="conatctForm" (ngSubmit)="submitData(conatctForm)">
+                      <div class="messages"></div>
+                      <div class="controls">
+                        <div class="row py-3">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="py-2" for="form_name">Firstname *</label>
+                              <input id="form_name" type="text"  formControlName="name" class="form-control" placeholder="firstname *" required>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div  class="col-md-6">
+                            <div class="form-group">
+                              <label class="py-2" for="form_lastname">Lastname *</label>
+                              <input id="form_lastname" type="text"  formControlName="surname" class="form-control" placeholder="lastname *" required>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div  class="row py-3">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="py-2" for="form_email">Email *</label>
+                              <input id="form_email" type="email" formControlName="email" class="form-control" placeholder="email *" required>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="py-2" for="form_phone">Phone</label>
+                              <input id="form_phone" type="tel"  formControlName="phone" class="form-control" placeholder="phone" required>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12 py-3">
+                            <div class="form-group">
+                              <label class="py-2" for="form_message">Message *</label>
+                              <textarea id="form_message"  formControlName="message" class="form-control" placeholder="Message for me *" rows="4" required></textarea>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <input type="submit" class="btn btn-success btn-send" value="Send message">
+                          </div>
+                        </div>
+                      </div>
+                      </form>
+                  </div>
+            </div>
+        </div>
     </div>
 </div>
 

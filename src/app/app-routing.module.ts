@@ -8,6 +8,7 @@ import { HomeDetailsComponent } from './home-details/home-details.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,9 @@ const routes: Routes = [
   },
   {
     path:'contact',component:ContactUsComponent,
+  },
+  {
+    path:'profile',component:ProfileComponent,
   },
   {
     path:'**',component:NotFoundComponent,

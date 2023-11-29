@@ -1,12 +1,30 @@
-.container-fluid{
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    
-}
+// .container-fluid {
+//     // color: black;
+// }
 
 ::ng-deep .dropdown-menu.show {
     display: block;
-    right:0;
+    right: 0;
 }
 
 ::ng-deep.dropdown-menu {
-    left:initial !important;
+    left: initial !important;
+}
+
+.fixed {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    .navbar{
+        background-color: black;
+        color: white;
+    }
+}
+
+.notfixed {
+    position: static;
+    top: -30px;
+    background-color: transparent !important;
+    color: black;
 }

@@ -34,16 +34,32 @@
                                             <div class="card mb-4">
                                                 <div class="card-header text-center">Account Details</div>
                                                 <div class="card-body text shadow text-start">
-                                                    <form>
+                                                    <!-- <form [formGroup]="editForm" (ngSubmit)="profilData(editForm)">
+                                                        <div class="mb-3">
+                                                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                                                          <input type="password" class="form-control" id="exampleInputPassword1">
+                                                        </div>
+                                                        <div class="mb-3 form-check">
+                                                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                                      </form> -->
+                                                    <form [formGroup]="editForm" (ngSubmit)="profilData(editForm)">
                                                         <div class="row gx-3 mb-3">
-                                                            <div class="col-md-6">
+                                                            <div class="form-group col-md-6">
                                                                 <label class="small mb-1">Admin name</label>
                                                                 <input class="form-control" formControlName="admin_name"
                                                                     type="text" name="admin_name" required />
         
                                                             </div>
         
-                                                            <div class="col-md-6">
+                                                            <div class="form-group col-md-6">
                                                                 <label class="small mb-1">User name</label>
                                                                 <input formControlName="username" class="form-control"
                                                                     type="text" name="username" required/>
@@ -53,13 +69,13 @@
                                                         </div>
         
                                                         <div class="row gx-3 mb-3">
-                                                            <div class="col-md-6">
+                                                            <div class="form-group col-md-6">
                                                                 <label class="small mb-1">Enter Email</label>
                                                                 <input formControlName="email" class="form-control"
                                                                     type="text" name="email" required />
         
                                                             </div>
-                                                            <div class="col-md-6">
+                                                            <div class="form-group col-md-6">
                                                                 <label class="small mb-1" for="inputPhone">Phone number</label>
                                                                 <input class="form-control" type="number"
                                                                     formControlName="mobile_number" name="mobile_number"required />
@@ -67,7 +83,7 @@
         
                                                         </div>
                                                         <div class="row gx-3 mb-3">
-                                                            <div class="col-md-12">
+                                                            <div class="form-group col-md-12">
                                                                 <label class="small mb-1">Message</label>
                                                                 <textarea id="form_message" name="message" formControlName="message" class="form-control" placeholder="Message for me *" rows="4" required data-error="Please,leave us a message."></textarea>
                                                             </div>
@@ -90,7 +106,7 @@
                                 <div class="card mb-4">
                                     <div class="card-header text-center">Password Change</div>
                                     <div class="card-body text shadow text-start">
-                                        <form [formGroup]="changePaaword" (ngsubmit)="changePass(changePaawordForm)">
+                                        <form [formGroup]="changePass" (ngSubmit)="changePassword(changePass)">
                                             <div class="row gx-3 mb-3">
                                                 <div class="col-md-12 py-2">
                                                     <label class="small mb-1">Enter Old Password</label>
